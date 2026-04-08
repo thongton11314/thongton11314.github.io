@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[Project Title] — A project by [Your Name]">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>[Project Title] — [Your Name]</title>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (same as main site) -->
+  <nav class="navbar navbar--scrolled" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo">[Your Name]</a>
+      <ul class="navbar__menu">
+        <li><a href="../index.html#about" class="navbar__link">About</a></li>
+        <li><a href="../index.html#experience" class="navbar__link">Experience</a></li>
+        <li><a href="../index.html#skills" class="navbar__link">Skills</a></li>
+        <li><a href="../index.html#projects" class="navbar__link navbar__link--active">Projects</a></li>
+        <li><a href="../index.html#contact" class="navbar__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" style="padding-top: var(--nav-height);">
+
+    <!-- Project Hero -->
+    <section class="section">
+      <div class="container">
+        <a href="../index.html#projects" style="display:inline-block; margin-bottom: var(--space-xl); font-size: var(--font-size-sm);">← Back to Projects</a>
+        <h1 class="section__title" style="text-align:left;">[Project Title]</h1>
+        <div class="about__stats" style="margin-bottom: var(--space-2xl);">
+          <div class="about__stat">
+            <span class="about__stat-label">Role</span>
+            <span class="about__stat-number" style="font-size: var(--font-size-base);">[Your Role]</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-label">Duration</span>
+            <span class="about__stat-number" style="font-size: var(--font-size-base);">[Timeline]</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-label">Status</span>
+            <span class="badge">[Active / Completed]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section section--alt">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section__title">Overview</h2>
+        <p style="color: var(--color-text-light); line-height: 1.8; font-size: var(--font-size-lg);">
+          [Detailed description of the project. What problem does it solve?
+          Who is the target audience? What was your approach?]
+        </p>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Screenshots</h2>
+        <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="project-card__image" style="height: 240px; border-radius: var(--radius-md);">
+            <!-- Replace with: <img src="../assets/images/project-screenshot-1.png" alt="Screenshot 1" loading="lazy"> -->
+          </div>
+          <div class="project-card__image" style="height: 240px; border-radius: var(--radius-md);">
+            <!-- Replace with: <img src="../assets/images/project-screenshot-2.png" alt="Screenshot 2" loading="lazy"> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section--alt">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section__title">Tech Stack</h2>
+        <div class="skills-card__tags" style="justify-content: center;">
+          <span class="skill-tag">[Tech 1]</span>
+          <span class="skill-tag">[Tech 2]</span>
+          <span class="skill-tag">[Tech 3]</span>
+          <span class="skill-tag">[Tech 4]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section__title">Challenges &amp; Learnings</h2>
+        <ul style="padding-left: var(--space-lg); color: var(--color-text-light);">
+          <li style="margin-bottom: var(--space-md); list-style: disc;">[Challenge 1 and how you solved it]</li>
+          <li style="margin-bottom: var(--space-md); list-style: disc;">[Challenge 2 and what you learned]</li>
+          <li style="margin-bottom: var(--space-md); list-style: disc;">[Key takeaway from the project]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="section section--alt">
+      <div class="container" style="text-align: center;">
+        <h2 class="section__title">Links</h2>
+        <div class="hero__cta">
+          <a href="[DEMO_URL]" class="btn btn--primary" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a>
+          <a href="[REPO_URL]" class="btn btn--outline" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (same as main site) -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Connect</h4>
+        <ul class="footer__links">
+          <li><a href="https://github.com/[yourusername]" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/[yourlinkedin]" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:[your.email@example.com]">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__tagline">&copy; 2026 [Your Name]. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

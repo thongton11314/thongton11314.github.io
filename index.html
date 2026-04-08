@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[Your Name] — [Your Title]. Portfolio showcasing experience, skills, and projects.">
+  <meta name="keywords" content="[Your Name], portfolio, software engineer, developer, projects">
+  <link rel="canonical" href="https://[yourusername].github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[Your Name] — Portfolio">
+  <meta property="og:description" content="[Your Title] — Explore my work, skills, and experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://[yourusername].github.io/">
+  <meta property="og:image" content="https://[yourusername].github.io/assets/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[Your Name] — Portfolio">
+  <meta name="twitter:description" content="[Your Title] — Explore my work, skills, and experience.">
+
+  <!-- Favicon — Replace with your own favicon files -->
+  <!-- <link rel="icon" href="/favicon.ico" sizes="any"> -->
+  <!-- <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml"> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "[Your Name]",
+    "url": "https://[yourusername].github.io",
+    "jobTitle": "[Your Title]",
+    "sameAs": [
+      "https://github.com/[yourusername]",
+      "https://linkedin.com/in/[yourlinkedin]"
+    ]
+  }
+  </script>
+
+  <title>[Your Name] — [Your Title]</title>
+</head>
+<body>
+  <!-- Skip to content (a11y) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo" aria-label="Home">[Your Name]</a>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <ul class="navbar__menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="#about" class="navbar__link" role="menuitem">About</a></li>
+        <li role="none"><a href="#experience" class="navbar__link" role="menuitem">Experience</a></li>
+        <li role="none"><a href="#skills" class="navbar__link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#projects" class="navbar__link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#interests" class="navbar__link" role="menuitem">Interests</a></li>
+        <li role="none"><a href="#contact" class="navbar__link" role="menuitem">Contact</a></li>
+        <li role="none">
+          <a href="asset/resumes/Thong-Ton-Resume.pdf" class="btn btn--sm btn--primary navbar__cta" download aria-label="Download Resume">
+            Download Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__decoration" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <h1 class="hero__title reveal">[Your Name]</h1>
+        <p class="hero__subtitle reveal">[Your Title — e.g., Software Engineer]</p>
+        <p class="hero__tagline reveal">
+          [A brief tagline about yourself — e.g., Building elegant solutions to complex problems.
+          Passionate about clean code, user experience, and continuous learning.]
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <h2 class="section__title reveal">About Me</h2>
+        <div class="about">
+          <div class="about__image reveal">
+            <div class="about__photo-placeholder" aria-label="Profile photo placeholder">
+              <span>[YN]</span>
+            </div>
+          </div>
+          <div class="about__text reveal">
+            <p>
+              [Currently working as a (role) at (company), where I (brief description of what you do).
+              With expertise in (key areas), I focus on delivering (value you provide).
+              I'm driven by (what motivates you — e.g., solving challenging problems,
+              creating impactful software, learning new technologies).]
+            </p>
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-number">[X]+</span>
+                <span class="about__stat-label">Years Experience</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">[Y]+</span>
+                <span class="about__stat-label">Projects</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">[Z]+</span>
+                <span class="about__stat-label">Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title reveal">Experience</h2>
+        <div class="timeline">
+
+          <!-- Experience Entry 1 -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__company-logo" aria-hidden="true">[C1]</div>
+                <div>
+                  <h3 class="timeline__role">[Job Title 1]</h3>
+                  <p class="timeline__company">[Company Name 1]</p>
+                </div>
+              </div>
+              <div class="timeline__meta">
+                <span class="badge">[Month Year] — Present</span>
+                <span class="timeline__location">[City, State]</span>
+              </div>
+              <ul class="timeline__details">
+                <li>[Key achievement or responsibility — quantify where possible]</li>
+                <li>[Technology or process you implemented/improved]</li>
+                <li>[Impact: "Reduced X by Y%" or "Led team of Z engineers"]</li>
+                <li>[Collaboration, mentoring, or cross-functional work]</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Entry 2 -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__company-logo" aria-hidden="true">[C2]</div>
+                <div>
+                  <h3 class="timeline__role">[Job Title 2]</h3>
+                  <p class="timeline__company">[Company Name 2]</p>
+                </div>
+              </div>
+              <div class="timeline__meta">
+                <span class="badge">[Month Year] — [Month Year]</span>
+                <span class="timeline__location">[City, State]</span>
+              </div>
+              <ul class="timeline__details">
+                <li>[Key achievement or responsibility]</li>
+                <li>[Technology or process you implemented/improved]</li>
+                <li>[Impact statement with metrics]</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Entry 3 -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__company-logo" aria-hidden="true">[C3]</div>
+                <div>
+                  <h3 class="timeline__role">[Job Title 3]</h3>
+                  <p class="timeline__company">[Company Name 3]</p>
+                </div>
+              </div>
+              <div class="timeline__meta">
+                <span class="badge">[Month Year] — [Month Year]</span>
+                <span class="timeline__location">[City, State]</span>
+              </div>
+              <ul class="timeline__details">
+                <li>[Key achievement or responsibility]</li>
+                <li>[Technology or process you implemented/improved]</li>
+                <li>[Impact statement with metrics]</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <p class="timeline__footer reveal">
+          <a href="https://linkedin.com/in/[yourlinkedin]" target="_blank" rel="noopener noreferrer">
+            View full experience on LinkedIn →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal">Skills &amp; Technologies</h2>
+        <div class="skills-grid">
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Languages &amp; Frameworks</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Python]</span>
+              <span class="skill-tag">[JavaScript]</span>
+              <span class="skill-tag">[TypeScript]</span>
+              <span class="skill-tag">[React]</span>
+              <span class="skill-tag">[Node.js]</span>
+              <span class="skill-tag">[SQL]</span>
+              <span class="skill-tag">[HTML/CSS]</span>
+              <span class="skill-tag">[C#]</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Tools &amp; Platforms</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Docker]</span>
+              <span class="skill-tag">[AWS]</span>
+              <span class="skill-tag">[Azure]</span>
+              <span class="skill-tag">[Git]</span>
+              <span class="skill-tag">[CI/CD]</span>
+              <span class="skill-tag">[Linux]</span>
+              <span class="skill-tag">[VS Code]</span>
+              <span class="skill-tag">[Jira]</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Soft Skills</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Communication]</span>
+              <span class="skill-tag">[Problem Solving]</span>
+              <span class="skill-tag">[Team Leadership]</span>
+              <span class="skill-tag">[Agile/Scrum]</span>
+              <span class="skill-tag">[Mentoring]</span>
+              <span class="skill-tag">[Critical Thinking]</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal">Projects</h2>
+        <p class="section__subtitle reveal">Here are some projects I've worked on. More coming soon!</p>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT CARD TEMPLATE — Copy this block to add a new project
+               1. Replace the gradient/image
+               2. Update title and description
+               3. Update tech tags
+               4. Add demo and repo links
+               5. Remove the "coming-soon" class if present
+          -->
+
+          <!-- Coming Soon Card 1 -->
+          <article class="project-card project-card--coming-soon reveal">
+            <div class="project-card__image">
+              <span class="project-card__soon-label">🚧 Coming Soon</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">[Project Title 1]</h3>
+              <p class="project-card__desc">[Brief description of the project — what it does and why it matters.]</p>
+              <div class="project-card__tags">
+                <span class="skill-tag skill-tag--sm">[Tech 1]</span>
+                <span class="skill-tag skill-tag--sm">[Tech 2]</span>
+                <span class="skill-tag skill-tag--sm">[Tech 3]</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo (coming soon)">🔗 Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="GitHub repo (coming soon)">💻 GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coming Soon Card 2 -->
+          <article class="project-card project-card--coming-soon reveal">
+            <div class="project-card__image">
+              <span class="project-card__soon-label">🚧 Coming Soon</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">[Project Title 2]</h3>
+              <p class="project-card__desc">[Brief description of the project — what it does and why it matters.]</p>
+              <div class="project-card__tags">
+                <span class="skill-tag skill-tag--sm">[Tech 1]</span>
+                <span class="skill-tag skill-tag--sm">[Tech 2]</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo (coming soon)">🔗 Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="GitHub repo (coming soon)">💻 GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coming Soon Card 3 -->
+          <article class="project-card project-card--coming-soon reveal">
+            <div class="project-card__image">
+              <span class="project-card__soon-label">🚧 Coming Soon</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">[Project Title 3]</h3>
+              <p class="project-card__desc">[Brief description of the project — what it does and why it matters.]</p>
+              <div class="project-card__tags">
+                <span class="skill-tag skill-tag--sm">[Tech 1]</span>
+                <span class="skill-tag skill-tag--sm">[Tech 2]</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo (coming soon)">🔗 Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="GitHub repo (coming soon)">💻 GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERESTS ===================== -->
+    <section class="section section--alt" id="interests">
+      <div class="container">
+        <h2 class="section__title reveal">Beyond Work</h2>
+        <p class="section__subtitle reveal">A well-rounded perspective fuels better problem-solving and creativity.</p>
+        <div class="interests-cta reveal" style="text-align:center; margin-top: var(--space-xl);">
+          <a href="personal.html" class="btn btn--primary btn--lg">Explore My Personal Page →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section__title reveal">Get in Touch</h2>
+        <div class="contact">
+
+          <div class="contact__info reveal">
+            <p class="contact__intro">
+              I'm always open to discussing new opportunities, interesting projects,
+              or just connecting. Feel free to reach out!
+            </p>
+            <ul class="contact__list">
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">✉️</span>
+                <a href="mailto:[your.email@example.com]">[your.email@example.com]</a>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">📍</span>
+                <span>WA, United States</span>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">💼</span>
+                <a href="https://linkedin.com/in/[yourlinkedin]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">🐙</span>
+                <a href="https://github.com/[yourusername]" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form reveal" action="https://formspree.io/f/[YOUR_FORM_ID]" method="POST" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" class="form-input" required autocomplete="name" aria-required="true">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email" aria-required="true">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="5" required aria-required="true"></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Connect</h4>
+        <ul class="footer__links">
+          <li><a href="https://github.com/[yourusername]" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/[yourlinkedin]" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="mailto:[your.email@example.com]" aria-label="Email">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__tagline">&copy; 2026 [Your Name]. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+
+  <!-- Resume Loader: change the file below to load a different resume -->
+  <script>window.RESUME_FILE = 'asset/resumes/Resume.md';</script>
+  <script src="js/resume-loader.js"></script>
+</body>
+</html>

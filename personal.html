@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beyond Work — Personal interests, hobbies, and the things that shape who I am outside of code.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Beyond Work — Personal</title>
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar navbar--scrolled" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Back to portfolio">← Portfolio</a>
+    </div>
+  </nav>
+
+  <main id="main-content" style="padding-top: var(--nav-height);">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="section" style="padding-top: var(--space-4xl);">
+      <div class="container" style="text-align: center;">
+        <h1 class="section__title reveal">Beyond Work</h1>
+        <p class="section__subtitle reveal" style="max-width: 640px; margin: 0 auto;">
+          A well-rounded perspective fuels better problem-solving and creativity.
+          Here's what keeps me inspired outside of code.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== INTERESTS ===================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="interests-grid">
+
+          <div class="interest-card reveal">
+            <div class="interest-card__icon" aria-hidden="true">🏃</div>
+            <h3 class="interest-card__title">Sports &amp; Active Living</h3>
+            <p class="interest-card__desc">
+              Passionate about teamwork and discipline through competitive sports.
+              Values the parallels between athletic training and professional growth —
+              consistency, resilience, and pushing beyond comfort zones.
+            </p>
+          </div>
+
+          <div class="interest-card reveal">
+            <div class="interest-card__icon" aria-hidden="true">📷</div>
+            <h3 class="interest-card__title">Visual Storytelling</h3>
+            <p class="interest-card__desc">
+              Capturing moments through photography — developing an eye for composition,
+              lighting, and detail. A practice that strengthens observation and creative
+              thinking in all aspects of work.
+            </p>
+          </div>
+
+          <div class="interest-card reveal">
+            <div class="interest-card__icon" aria-hidden="true">📚</div>
+            <h3 class="interest-card__title">Philosophy &amp; Critical Thinking</h3>
+            <p class="interest-card__desc">
+              Avid reader of philosophy and classical texts. Enjoys exploring Stoicism,
+              existentialism, and ethical frameworks that inform thoughtful
+              decision-making in both life and work.
+            </p>
+          </div>
+
+          <div class="interest-card reveal">
+            <div class="interest-card__icon" aria-hidden="true">📊</div>
+            <h3 class="interest-card__title">Economics &amp; Global Perspectives</h3>
+            <p class="interest-card__desc">
+              Keen interest in macroeconomics, market trends, and public policy.
+              Enjoys analyzing how economic forces shape technology, innovation,
+              and society at large.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LEADERSHIP & VOLUNTEERING ===================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Leadership &amp; Volunteering</h2>
+        <div class="timeline" id="leadership-timeline">
+          <!-- Populated by resume-loader if available, or static fallback below -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HONORS & AWARDS ===================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Honors &amp; Awards</h2>
+        <div class="timeline" id="honors-timeline">
+          <!-- Populated by resume-loader if available, or static fallback below -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BACK TO PORTFOLIO ===================== -->
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <a href="index.html" class="btn btn--primary btn--lg">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <p class="footer__tagline">&copy; 2026 Thong Ton. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- Load leadership & honors from resume dynamically -->
+  <script>
+  (function () {
+    'use strict';
+
+    var RESUME_FILE = 'asset/resumes/Resume.md';
+
+    function stripMd(text) {
+      if (!text) return '';
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\*(.*?)\*/g, '$1')
+        .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+        .replace(/\\-/g, '-')
+        .replace(/\\&/g, '&')
+        .trim();
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function splitSections(md) {
+      var lines = md.split('\n');
+      var sections = {};
+      var currentKey = '_header';
+      var buffer = [];
+      for (var i = 0; i < lines.length; i++) {
+        var heading = lines[i].match(/^#\s+\**(.+?)\**\s*$/);
+        if (heading) {
+          sections[currentKey] = buffer;
+          currentKey = heading[1].replace(/\*/g, '').trim().toUpperCase();
+          buffer = [];
+        } else {
+          buffer.push(lines[i]);
+        }
+      }
+      sections[currentKey] = buffer;
+      return sections;
+    }
+
+    function parseGenericBullets(lines) {
+      var entries = [];
+      var current = null;
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (!line) continue;
+        if (line.startsWith('* ') || line.startsWith('- ')) {
+          if (current) current.bullets.push(stripMd(line.replace(/^\*\s+/, '').replace(/^-\s+/, '')));
+        } else {
+          if (current) entries.push(current);
+          var dateMatch = line.match(/\*([^*]*\d{4}[^*]*)\*/);
+          current = { heading: stripMd(line), dates: dateMatch ? stripMd(dateMatch[1]) : '', bullets: [] };
+        }
+      }
+      if (current) entries.push(current);
+      return entries;
+    }
+
+    function renderTimeline(containerId, entries) {
+      var container = document.getElementById(containerId);
+      if (!container || entries.length === 0) return;
+      container.innerHTML = '';
+      entries.forEach(function (entry) {
+        var bullets = entry.bullets.map(function (b) { return '<li>' + escapeHtml(b) + '</li>'; }).join('');
+        var html =
+          '<div class="timeline__item reveal">' +
+            '<div class="timeline__dot" aria-hidden="true"></div>' +
+            '<div class="timeline__card">' +
+              '<h3 class="timeline__role">' + escapeHtml(entry.heading) + '</h3>' +
+              (entry.dates ? '<div class="timeline__meta"><span class="badge">' + escapeHtml(entry.dates) + '</span></div>' : '') +
+              (bullets ? '<ul class="timeline__details">' + bullets + '</ul>' : '') +
+            '</div>' +
+          '</div>';
+        container.insertAdjacentHTML('beforeend', html);
+      });
+      // Re-trigger reveals
+      var els = container.querySelectorAll('.reveal:not(.revealed)');
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        els.forEach(function (el) { obs.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('revealed'); });
+      }
+    }
+
+    fetch(RESUME_FILE)
+      .then(function (res) { if (!res.ok) throw new Error(res.status); return res.text(); })
+      .then(function (md) {
+        var sections = splitSections(md);
+        var leadership = parseGenericBullets(sections['LEADERSHIP & VOLUNTEERS'] || sections['LEADERSHIP AND VOLUNTEERS'] || []);
+        var honors = parseGenericBullets(sections['HONORS & AWARDS'] || sections['HONORS AND AWARDS'] || []);
+        renderTimeline('leadership-timeline', leadership);
+        renderTimeline('honors-timeline', honors);
+
+        // Update footer name
+        var headerLines = sections['_header'] || [];
+        for (var i = 0; i < headerLines.length; i++) {
+          var nameMatch = headerLines[i].match(/\*\*(.+?)\*\*/);
+          if (nameMatch) {
+            var footerEl = document.querySelector('.footer__tagline');
+            if (footerEl) footerEl.innerHTML = '&copy; ' + new Date().getFullYear() + ' ' + escapeHtml(nameMatch[1]) + '. All rights reserved.';
+            break;
+          }
+        }
+      })
+      .catch(function (err) { console.error('[personal-loader]', err); });
+  })();
+  </script>
+
+</body>
+</html>
