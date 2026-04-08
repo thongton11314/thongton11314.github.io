@@ -640,7 +640,7 @@
       });
     }
 
-    // GitHub links — derive from projects
+    // GitHub links — derive from projects (only update contact & footer links, not project cards)
     var ghUsername = '';
     data.projects.forEach(function (p) {
       if (!ghUsername && p.url) {
@@ -650,10 +650,15 @@
     });
     if (ghUsername) {
       var ghUrl = 'https://github.com/' + ghUsername;
-      var ghLinks = document.querySelectorAll('a[href*="github"]');
-      ghLinks.forEach(function (el) {
-        el.setAttribute('href', ghUrl);
-        if (el.textContent.indexOf('GitHub') > -1) el.textContent = 'GitHub';
+      var contactSection = document.getElementById('contact');
+      var footer = document.querySelector('.footer');
+      [contactSection, footer].forEach(function (container) {
+        if (!container) return;
+        var ghLinks = container.querySelectorAll('a[href*="github"]');
+        ghLinks.forEach(function (el) {
+          el.setAttribute('href', ghUrl);
+          if (el.textContent.indexOf('GitHub') > -1) el.textContent = 'GitHub';
+        });
       });
     }
 
