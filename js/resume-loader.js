@@ -302,7 +302,10 @@
           if (plainType) type = plainType;
         }
 
-        current = { title: projLink[1], url: projLink[2], type: type, dates: dates, bullets: [] };
+        // Extract secondary link (live site URL) if present on the same heading line
+        var allProjLinks = extractAllLinks(line);
+        var siteUrl = allProjLinks.length > 1 ? allProjLinks[1].url : '';
+        current = { title: projLink[1], url: projLink[2], siteUrl: siteUrl, type: type, dates: dates, bullets: [] };
         continue;
       }
 
@@ -518,11 +521,17 @@
       data.projects.forEach(function (proj) {
         var allBullets = proj.bullets.map(function (b) { return '<li>' + escapeHtml(b) + '</li>'; }).join('');
 
+        var imageHtml = proj.siteUrl
+          ? '<div class="project-card__preview">' +
+              '<iframe src="' + escapeHtml(proj.siteUrl) + '" title="' + escapeHtml(proj.title) + ' site preview" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1" aria-hidden="true"></iframe>' +
+            '</div>'
+          : '<div class="project-card__image">' +
+              '<span class="project-card__soon-label">' + escapeHtml(proj.type || 'Project') + '</span>' +
+            '</div>';
+
         var html =
           '<article class="project-card reveal">' +
-            '<div class="project-card__image">' +
-              '<span class="project-card__soon-label">' + escapeHtml(proj.type || 'Project') + '</span>' +
-            '</div>' +
+            imageHtml +
             '<div class="project-card__body">' +
               '<h3 class="project-card__title">' + escapeHtml(proj.title) + '</h3>' +
               (allBullets ? '<ul class="project-card__details">' + allBullets + '</ul>' : '') +
@@ -531,6 +540,7 @@
                 (proj.type ? '<span class="skill-tag skill-tag--sm">' + escapeHtml(proj.type) + '</span>' : '') +
               '</div>' +
               '<div class="project-card__links">' +
+                (proj.siteUrl ? '<a href="' + escapeHtml(proj.siteUrl) + '" class="project-card__link" target="_blank" rel="noopener noreferrer" aria-label="Live site for ' + escapeHtml(proj.title) + '">🔗 Live Site</a>' : '') +
                 (proj.url ? '<a href="' + escapeHtml(proj.url) + '" class="project-card__link" target="_blank" rel="noopener noreferrer">💻 GitHub</a>' : '') +
               '</div>' +
             '</div>' +

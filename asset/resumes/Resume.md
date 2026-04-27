@@ -68,6 +68,20 @@ Software & system engineer with 4+ years of professional experience spanning sys
 
 # **PROJECTS**
 
+[**Agent Coding Framework**](https://github.com/thongton11314/agent-coding-template) *\- AI Development Framework* [Live Site](https://thongton11314.github.io/agent-coding-template-site/)	    *January 2026 \- Present*
+
+* Reusable AI-assisted development framework providing a persistent wiki for any project
+* Install in minutes via setup script — works on new or existing projects instantly
+* AI retains full codebase context as the project grows, preventing knowledge loss
+* Supports VS Code Copilot, Claude Code, and OpenAI Codex out of the box
+
+[**SkillForge: Agent Skill Self-Improvement**](https://github.com/thongton11314/agent-skill-self-improvement) *\- AI Framework* [Live Site](https://thongton11314.github.io/agent-skill-self-improvement-site/)	    *April 2026 \- Present*
+
+* AI agents autonomously generate, verify, and evolve structured skill packages
+* Co-evolutionary feedback loop between Skill Generator and Surrogate Verifier
+* Three-tier memory system (episodic → semantic → procedural) with adaptive retrieval
+* Plug-in architecture — integrates with LangChain, AutoGen, Semantic Kernel, and MCP
+
 [**Stock Analyst**](https://github.com/thongton11314/stock-analysis) *\- AI Agentic System*	    *January 2026 \- April 2026*
 
 * Built an AI agent system with 3 specialized Copilot agents and 13 auto-matched skills that generates 20-section interactive HTML stock reports from live Alpha Vantage market data
