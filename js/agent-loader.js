@@ -111,16 +111,15 @@
 
     return [
       '<article class="agent-card reveal">',
-      '  <div class="agent-card__header">',
-      '    <span class="agent-card__icon" aria-hidden="true">' + agent.icon + '</span>',
-      '    <div class="agent-card__meta">',
-      '      <h3 class="agent-card__name">' + agent.name + '</h3>',
-      '      <span class="agent-card__type">' + agent.type + '</span>',
-      '    </div>',
+      '  <div class="agent-card__image">',
+      '    <span class="agent-card__type">' + agent.type + '</span>',
       '    <span class="agent-card__badge ' + statusClass(agent.status) + '">' + agent.status + '</span>',
       '  </div>',
-      '  <p class="agent-card__desc">' + agent.description + '</p>',
-      '  <div class="agent-card__tools">' + toolTags + '</div>',
+      '  <div class="agent-card__body">',
+      '    <h3 class="agent-card__name">' + agent.name + '</h3>',
+      '    <p class="agent-card__desc">' + agent.description + '</p>',
+      '    <div class="agent-card__tools">' + toolTags + '</div>',
+      '  </div>',
       '</article>'
     ].join('\n');
   }
