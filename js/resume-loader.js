@@ -433,10 +433,12 @@
       stats[0].textContent = yearsMatch ? yearsMatch[1] + '+' : '4+';
     }
     if (stats.length >= 2) stats[1].textContent = data.projects.length + '+';
-    if (stats.length >= 3) {
+    // stats[2] is the Agents count — managed by agent-loader.js, skip it here
+    var techCountEl = document.getElementById('tech-count');
+    if (techCountEl) {
       var techCount = 0;
       data.skills.forEach(function (c) { techCount += c.items.length; });
-      stats[2].textContent = techCount + '+';
+      techCountEl.textContent = techCount + '+';
     }
 
     // ---- Experience ----

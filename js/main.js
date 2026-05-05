@@ -120,6 +120,9 @@
     revealElements.forEach(function (el) {
       revealObserver.observe(el);
     });
+
+    // Expose observer globally so dynamic content loaders can register new elements
+    window._revealObserver = revealObserver;
   } else {
     // Fallback: show all immediately
     revealElements.forEach(function (el) {

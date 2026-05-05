@@ -65,8 +65,9 @@
       <ul class="navbar__menu" id="nav-menu" role="menubar">
         <li role="none"><a href="#about" class="navbar__link" role="menuitem">About</a></li>
         <li role="none"><a href="#experience" class="navbar__link" role="menuitem">Experience</a></li>
-        <li role="none"><a href="#skills" class="navbar__link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#agents" class="navbar__link" role="menuitem">Agents</a></li>
         <li role="none"><a href="#projects" class="navbar__link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" class="navbar__link" role="menuitem">Skills</a></li>
         <li role="none"><a href="#interests" class="navbar__link" role="menuitem">Interests</a></li>
         <li role="none"><a href="#contact" class="navbar__link" role="menuitem">Contact</a></li>
         <li role="none">
@@ -124,7 +125,11 @@
                 <span class="about__stat-label">Projects</span>
               </div>
               <div class="about__stat">
-                <span class="about__stat-number">[Z]+</span>
+                <span class="about__stat-number" id="agent-count">6+</span>
+                <span class="about__stat-label">Agents</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number" id="tech-count">[Z]+</span>
                 <span class="about__stat-label">Technologies</span>
               </div>
             </div>
@@ -218,52 +223,13 @@
       </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
-    <section class="section section--alt" id="skills">
+    <!-- ===================== AGENTS ===================== -->
+    <section class="section section--alt" id="agents">
       <div class="container">
-        <h2 class="section__title reveal">Skills &amp; Technologies</h2>
-        <div class="skills-grid">
-
-          <div class="skills-card reveal">
-            <h3 class="skills-card__title">Languages &amp; Frameworks</h3>
-            <div class="skills-card__tags">
-              <span class="skill-tag">[Python]</span>
-              <span class="skill-tag">[JavaScript]</span>
-              <span class="skill-tag">[TypeScript]</span>
-              <span class="skill-tag">[React]</span>
-              <span class="skill-tag">[Node.js]</span>
-              <span class="skill-tag">[SQL]</span>
-              <span class="skill-tag">[HTML/CSS]</span>
-              <span class="skill-tag">[C#]</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <h3 class="skills-card__title">Tools &amp; Platforms</h3>
-            <div class="skills-card__tags">
-              <span class="skill-tag">[Docker]</span>
-              <span class="skill-tag">[AWS]</span>
-              <span class="skill-tag">[Azure]</span>
-              <span class="skill-tag">[Git]</span>
-              <span class="skill-tag">[CI/CD]</span>
-              <span class="skill-tag">[Linux]</span>
-              <span class="skill-tag">[VS Code]</span>
-              <span class="skill-tag">[Jira]</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <h3 class="skills-card__title">Soft Skills</h3>
-            <div class="skills-card__tags">
-              <span class="skill-tag">[Communication]</span>
-              <span class="skill-tag">[Problem Solving]</span>
-              <span class="skill-tag">[Team Leadership]</span>
-              <span class="skill-tag">[Agile/Scrum]</span>
-              <span class="skill-tag">[Mentoring]</span>
-              <span class="skill-tag">[Critical Thinking]</span>
-            </div>
-          </div>
-
+        <h2 class="section__title reveal">AI Agents</h2>
+        <p class="section__subtitle reveal">Agents I have built, configured, and deployed across projects and workflows.</p>
+        <div class="agents-grid" id="agents-grid">
+          <!-- Cards are rendered by agent-loader.js from asset/agents/agent.md -->
         </div>
       </div>
     </section>
@@ -412,6 +378,56 @@
       </div>
     </section>
 
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal">Skills &amp; Technologies</h2>
+        <div class="skills-grid">
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Languages &amp; Frameworks</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Python]</span>
+              <span class="skill-tag">[JavaScript]</span>
+              <span class="skill-tag">[TypeScript]</span>
+              <span class="skill-tag">[React]</span>
+              <span class="skill-tag">[Node.js]</span>
+              <span class="skill-tag">[SQL]</span>
+              <span class="skill-tag">[HTML/CSS]</span>
+              <span class="skill-tag">[C#]</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Tools &amp; Platforms</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Docker]</span>
+              <span class="skill-tag">[AWS]</span>
+              <span class="skill-tag">[Azure]</span>
+              <span class="skill-tag">[Git]</span>
+              <span class="skill-tag">[CI/CD]</span>
+              <span class="skill-tag">[Linux]</span>
+              <span class="skill-tag">[VS Code]</span>
+              <span class="skill-tag">[Jira]</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <h3 class="skills-card__title">Soft Skills</h3>
+            <div class="skills-card__tags">
+              <span class="skill-tag">[Communication]</span>
+              <span class="skill-tag">[Problem Solving]</span>
+              <span class="skill-tag">[Team Leadership]</span>
+              <span class="skill-tag">[Agile/Scrum]</span>
+              <span class="skill-tag">[Mentoring]</span>
+              <span class="skill-tag">[Critical Thinking]</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== INTERESTS ===================== -->
     <section class="section section--alt" id="interests">
       <div class="container">
@@ -512,10 +528,13 @@
   <!-- Back to Top -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 
   <!-- Resume Loader: change the file below to load a different resume -->
   <script>window.RESUME_FILE = 'asset/resumes/Resume.md';</script>
-  <script src="js/resume-loader.js"></script>
+  <script src="js/resume-loader.js?v=3"></script>
+
+  <!-- Agent Loader: reads asset/agents/agent.md and renders agent cards -->
+  <script src="js/agent-loader.js?v=3"></script>
 </body>
 </html>
